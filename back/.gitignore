@@ -1,0 +1,10 @@
+*.suo
+*vs
+*.userosscache
+bin
+obj
+.vscode
+.DS_Store
+*.db
+wwwroot
+publish
