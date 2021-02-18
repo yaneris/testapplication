@@ -36,5 +36,25 @@ namespace back.Controllers
                 })
                 .ToArray();
         }
+
+        [HttpGet("List")]
+        public IEnumerable<String> Get_List()
+        {
+            return Summaries.ToList();
+        }
+
+        [HttpGet("List/{id}")]
+        public string Get_list_byId(int id)
+        {
+            if (id < 0 || id > Summaries.Length - 1)
+            {
+                return new string("not found");
+            }
+            else
+            {
+                return Summaries[id];
+            }
+        }
+        
     }
 }
